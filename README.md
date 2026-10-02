@@ -32,6 +32,26 @@ Built as the midterm project for a Graphics Programming course.
 
 The game loads images and sounds, so it has to be served over a local web server. Opening `index.html` directly from the file system won't work.
 
+### Quick start (one command)
+
+**Step 1:** Run this command in the terminal first. It downloads the project from GitHub into a temporary folder and starts a local web server:
+
+```bash
+D=$(mktemp -d) && gh repo clone Alizea2/Snooker-Table "$D" && cd "$D" && python3 -m http.server 8000
+```
+
+**Step 2:** Once the terminal shows `Serving HTTP on ... port 8000`, click this link to open the game in your browser:
+
+**<http://localhost:8000>**
+
+Keep the terminal open while you play. When you're done, press `Ctrl + C` in the terminal to stop the server.
+
+> This needs the [GitHub CLI](https://cli.github.com/) (`gh`) signed in to an account that can access this repository, and Python 3.
+
+### Other ways to run it
+
+From inside the project folder:
+
 **VS Code:** install the *Live Server* extension, right-click `index.html`, and choose **Open with Live Server**.
 
 **Python:**
